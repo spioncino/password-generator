@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet">
+        <link href="img/icon.png" rel="icon">
+        <title>Password generator</title>
+    </head>
+    <body id="main">
+        <h1 class="center-text">Password generator</h1>
+        <p class="center-text">On this site we will be able to generate a strong password for future use</p>
+
+        <div class="container">
+            <p class="text" id="on-button-text">Select the password parameters of interest:</p>
+
+            <label>
+                <button class="toggle-button" id="first-button" onclick="LowerCase()">
+                    X
+                </button>
+                use lowercase letters [abcd...]</label>
+            <br/>
+
+            <label>
+                <button class="toggle-button" id="second-button" onclick="UpperCase()">
+                    X
+                </button>
+                use uppercase letters [ABCD...]</label>
+            <br/>
+
+            <label>
+                <button class="toggle-button" id="third-button" onclick="Numbers()">
+                    X
+                </button>
+                use numbers [1234...]</label>
+            <br/>
+
+            <label>
+                <button class="toggle-button" id="fourth-button" onclick="SpecialChar()">
+                    X
+                </button>
+                user special characters [%, *, ), ?, @, #, $, ~]</label>
+            <br/>
+        </div>
+
+        <div id="box-text">
+            <label>Enter the password size:
+                <input id='pass-size' type="number" value placeholder="from 1 to 32">
+            </label>
+        </div>
+
+        <div class="container">
+            <button id="gen-pas-button" onclick="Generation()">Generate a password</button>
+            <div id="output"></div>
+        </div>
+
+        <script src="src/script.js"></script>
+    </body>
+</html>
