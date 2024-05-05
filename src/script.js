@@ -77,7 +77,7 @@ function Generation() {
         alert('ERROR. Invalid size specified')
     }
     else if (lowercase || uppercase || numbers || special_char) {
-        while (result_pass.length != pass_size.value) {
+        while (result_pass.length != Math.floor(pass_size.value)) {
             const random_condition = RandomInt(4);
             let element_id = 0;
                 switch (true) {
